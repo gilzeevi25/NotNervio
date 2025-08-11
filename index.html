@@ -31,8 +31,9 @@
   <section id="mission" class="hero">
     <h1>Empowering Safer Surgery Through AI‑Driven EMG, SSEP &amp; MEP Models</h1>
     <p>Real‑time alerts and recommendations to enhance intraoperative monitoring.</p>
-    <a href="#solution" class="btn">Watch Demo</a>
+    <a href="#live-demo" class="btn">Watch Demo</a>
     <div class="scroll-indicator"></div>
+    <canvas id="heroParticles" aria-hidden="true"></canvas>
   </section>
 
   <!-- Need Section -->
@@ -58,7 +59,7 @@
   <section id="solution">
     <h2>Our Solution</h2>
     <div class="solution">
-      <img src="assets/images/team1.svg" alt="AI illustration" />
+      <img src="assets/images/hero_or_ai.svg" alt="Stylized AI neuromonitoring illustration" />
       <div>
         <p>NotNervio leverages deep‑learning models trained on EMG, SSEP and MEP data to deliver real‑time alerts during surgery.</p>
         <p>By converting complex neuro signals into clear guidance, surgeons can respond faster and keep patients safer.</p>
@@ -66,9 +67,38 @@
     </div>
   </section>
 
+  <!-- Live Demo -->
+  <section id="live-demo" class="live-demo">
+    <h2>Live AI Monitor (Demo)</h2>
+    <p class="demo-sub">Simulated EMG/SSEP/MEP streams with real-time alerts.</p>
+
+    <div class="monitor">
+      <canvas id="emgCanvas" width="900" height="120" aria-label="EMG waveform"></canvas>
+      <canvas id="ssepCanvas" width="900" height="120" aria-label="SSEP waveform"></canvas>
+      <canvas id="mepCanvas" width="900" height="120" aria-label="MEP waveform"></canvas>
+    </div>
+
+    <div class="demo-controls">
+      <button id="demoToggle" class="btn" aria-pressed="false">Start Demo</button>
+      <label class="speed">
+        <span>Speed</span>
+        <input id="demoSpeed" type="range" min="0.5" max="2" step="0.1" value="1">
+      </label>
+    </div>
+
+    <div id="alertBar" class="alert-bar" role="status" aria-live="polite">
+      <span class="pill quiet">Quiet</span>
+      <span class="pill ok">Stable</span>
+    </div>
+  </section>
+
   <!-- Features Section -->
   <section id="features">
     <h2>Features</h2>
+    <picture>
+      <source srcset="assets/images/signals_collage.svg" type="image/svg+xml">
+      <img src="assets/images/signals_collage.svg" alt="EMG, SSEP and MEP visual collage" style="width:100%;max-width:900px;display:block;margin:0 auto 1rem;">
+    </picture>
     <div class="features-grid">
       <div class="feature-item hidden">
         <i class="fas fa-chart-line"></i>
@@ -91,6 +121,11 @@
         <p>Faster clinical alerts with clear visuals</p>
       </div>
     </div>
+  </section>
+
+  <section id="model-overview">
+    <h2>Model Overview</h2>
+    <img src="assets/images/model_cards.svg" alt="Model cards overview" style="width:100%;max-width:900px;display:block;margin:0 auto;">
   </section>
 
   <!-- Testimonials Section -->
