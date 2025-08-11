@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="100%" height="100%" fill="#0a0f1f"></rect>
+  <g transform="translate(40,40)">
+    <rect width="820" height="120" fill="#111a33" rx="10"></rect>
+    <path d="M0,60 C60,40 100,80 160,60 220,40 260,80 320,60 380,40 420,80 480,60 540,40 580,80 640,60 700,40 740,80 820,60" stroke="#3d7fff" fill="none" stroke-width="2"></path>
+    <text x="12" y="22" fill="#99b6ff" font-family="Montserrat" font-size="12">EMG</text>
+  </g>
+  <g transform="translate(40,190)">
+    <rect width="820" height="120" fill="#111a33" rx="10"></rect>
+    <path d="M0,80 L80,80 120,45 200,110 280,55 360,95 440,65 520,85 600,70 680,82 760,60 820,78" stroke="#3d7fff" fill="none" stroke-width="2"></path>
+    <text x="12" y="22" fill="#99b6ff" font-family="Montserrat" font-size="12">SSEP</text>
+  </g>
+  <g transform="translate(40,340)">
+    <rect width="820" height="120" fill="#111a33" rx="10"></rect>
+    <path d="M0,60 C60,60 60,60 120,60 180,30 240,90 300,60 360,40 420,40 480,60 540,90 600,30 660,60 720,60 760,60 820,60" stroke="#3d7fff" fill="none" stroke-width="2"></path>
+    <text x="12" y="22" fill="#99b6ff" font-family="Montserrat" font-size="12">MEP</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280">
+  <rect width="100%" height="100%" fill="#0a0f1f"></rect>
+  <g transform="translate(40,40)" font-family="Montserrat" fill="#e8eeff">
+    <rect width="240" height="200" rx="16" fill="#111a33" stroke="#1f437c"></rect>
+    <text x="20" y="36" font-size="16" fill="#99b6ff">EMG Model</text>
+    <text x="20" y="68" font-size="12" fill="#cbd8ff">Noise suppression · Irritation flags</text>
+    <text x="20" y="92" font-size="12" fill="#cbd8ff">Latency: ~70 ms</text>
+  </g>
+  <g transform="translate(330,40)" font-family="Montserrat" fill="#e8eeff">
+    <rect width="240" height="200" rx="16" fill="#111a33" stroke="#1f437c"></rect>
+    <text x="20" y="36" font-size="16" fill="#99b6ff">SSEP Model</text>
+    <text x="20" y="68" font-size="12" fill="#cbd8ff">Amplitude drop · Latency shift</text>
+    <text x="20" y="92" font-size="12" fill="#cbd8ff">Latency: ~90 ms</text>
+  </g>
+  <g transform="translate(620,40)" font-family="Montserrat" fill="#e8eeff">
+    <rect width="240" height="200" rx="16" fill="#111a33" stroke="#1f437c"></rect>
+    <text x="20" y="36" font-size="16" fill="#99b6ff">MEP Model</text>
+    <text x="20" y="68" font-size="12" fill="#cbd8ff">P2P ratio · Response quality</text>
+    <text x="20" y="92" font-size="12" fill="#cbd8ff">Latency: ~60 ms</text>
+  </g>
+</svg>
