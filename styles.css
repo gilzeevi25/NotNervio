@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --bg-dark: #0a0f1f;
+  --accent: #3d7fff;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+nav a {
+  color: var(--text-light);
+  margin-left: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--accent);
+}
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0a1931 0%, #1f437c 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+.hero h1 span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: inline-block;
+}
+.hero h1.revealed span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+.btn:hover,
+.btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; transform: translateY(0) rotate(-45deg); }
+  50% { opacity: 0.5; transform: translateY(10px) rotate(-45deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(-45deg); }
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Need Cards */
+.need-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+@media(min-width:768px){
+  .need-cards { grid-template-columns: repeat(3,1fr); }
+}
+
+/* Solution */
+.solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.solution img {
+  width: 100%;
+  max-width: 400px;
+}
+@media(min-width:768px){
+  .solution { flex-direction: row; }
+}
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+.feature-item i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+@media(min-width:768px){
+  .features-grid { grid-template-columns: repeat(5,1fr); }
+}
+
+/* Testimonials */
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.testimonial {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+.testimonial.active {
+  display: block;
+}
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #555;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot.active {
+  background: var(--accent);
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+@media(min-width:768px){
+  .team-grid { grid-template-columns: repeat(3,1fr); }
+}
+
+/* Careers */
+.careers {
+  background: #111;
+  text-align: center;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+}
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+}
+.contact button {
+  width: 150px;
+  justify-self: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+}
