@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   headline.innerHTML = '';
   [...text].forEach((char, i) => {
     const span = document.createElement('span');
-    span.textContent = char;
+    if (char === ' ') {
+      span.innerHTML = '&nbsp;';
+      span.style.display = 'inline';
+    } else {
+      span.textContent = char;
+      span.style.display = 'inline-block';
+    }
     span.style.transitionDelay = `${i * 50}ms`;
     headline.appendChild(span);
   });
